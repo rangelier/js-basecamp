@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="jquery.base64.js"></script>
+    <script type="text/javascript" src="jquery.basecamp.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $.basecamp({
+                account: "your_account_name",
+                token: "your_token",
+                dataType: "json"
+            }, "companies", function (data) {
+                if (!$.isEmptyObject(data)) {
+                    var table = $("table.projects");
+
+                    $.each(data.records, function (index, value) {
+                        var row = $("<tr></tr>");
+                        var td = $("<td></td>");
+                        td.text(value.name);
+
+                        row.append(td);
+                        table.append(row);
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<table class="projects">
+</table>
+</body>
+</html>
