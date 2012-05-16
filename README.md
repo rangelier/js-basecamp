@@ -29,10 +29,10 @@ A simple jQuery plugin for communication with the 37signals basecamp API
 $.basecamp(options,collection,callback)
 
 * **options**
-  *The options object wich i explained above
+  The options object wich i explained above
 * **collection**
-  *The type of collection to retrieve. For eq. projects, companies etc.
+  The type of collection to retrieve. For eq. projects, companies etc.
 * **callback**
-  *The callback function wich will be called after the data is successfully retrieved from the basecamp API.
+  The callback function wich will be called after the data is successfully retrieved from the basecamp API.
 
 	
